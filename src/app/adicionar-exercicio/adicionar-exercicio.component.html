@@ -1,16 +1,16 @@
 <div class="container p-3 mt-5">
-    <form class="row g-3">
+    <form class="row g-3" [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
         <div class="col-md-6">
             <label for="nomeExercicio" class="form-label">Nome do Exercicio</label>
-            <input type="text" class="form-control" id="nomeExercicio" placeholder="Handstand">
+            <input type="text" class="form-control" id="nomeExercicio" formControlName="nomeExercicio" placeholder="Handstand">
         </div>
         <div class="col-md-6">
             <label for="duracaoExercicio" class="form-label">Duração do Exercicio</label>
-            <input type="text" class="form-control" id="duracaoExercicio" placeholder="Flexão">
+            <input type="text" class="form-control" id="duracaoExercicio" formControlName="duracaoExercicio" placeholder="Flexão">
         </div>
         <div class="col-6">
             <label for="aparelhoUtilizado" class="form-label">Aparelho Utilizado</label>
-            <input type="text" class="form-control" id="aparelhoUtilizado" placeholder="Barra fixa">
+            <input type="text" class="form-control" formControlName="equipamentoUtilizado" id="aparelhoUtilizado" placeholder="Barra fixa">
         </div>
         <div class="col-md-6">
             <label for="inputState" class="form-label">Area de Ativação</label>
