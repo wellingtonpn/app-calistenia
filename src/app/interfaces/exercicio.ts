@@ -1,7 +1,7 @@
-export interface Exercicio {
+export class Exercicio {
 
-    nomeExercicio: string;
-    duracaoExercicio: string;
-    equipamentoUtilizado: string;
-
+    id: number = 0;
+    nomeExercicio: string = "";
+    duracaoExercicio: string = "";
+    equipamentoUtilizado: string = "";
 }

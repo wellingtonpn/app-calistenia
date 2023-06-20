@@ -9,6 +9,7 @@ import { AdicionarExercicioComponent } from './adicionar-exercicio/adicionar-exe
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListarExerciciosComponent } from './listar-exercicios/listar-exercicios.component';
+import { ExercicioService } from './service/exercicio.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ListarExerciciosComponent } from './listar-exercicios/listar-exercicios
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ExercicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

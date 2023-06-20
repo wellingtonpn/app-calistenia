@@ -1,1 +1,25 @@
-<p>listar-exercicios works!</p>
+<div class="container-fluid mt-5 p-3">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome do Exercicio</th>
+                <th scope="col">Tempo de Duração</th>
+                <th scope="col">Equipamento Utilizado</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let exercicio of exercicios; let i = index">
+                <th scope="row">{{ exercicio.id }}</th>
+                <td>{{ exercicio.nomeExercicio }}</td>
+                <td>{{ exercicio.equipamentoUtilizado }}</td> 
+                <td>{{ exercicio.duracaoExercicio }}</td>
+                <td>
+                    <button class="btn btn-primary" style="margin-right: 30px;" (click)="atualizarExercicio(exercicio.id, exercicio)">ATUALIZAR</button>
+                    <button class="btn btn-danger" (click)="excluirExercicio(exercicio.id)">EXCLUIR</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
